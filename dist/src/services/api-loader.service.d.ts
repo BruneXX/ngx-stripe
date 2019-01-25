@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { WindowRef } from './window-ref.service';
 import { DocumentRef } from './document-ref.service';
 export interface Status {

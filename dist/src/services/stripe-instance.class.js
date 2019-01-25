@@ -3,7 +3,7 @@
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 import { isSourceData } from '../interfaces/sources';
 import { isBankAccount, isBankAccountData, isPii, isPiiData } from '../interfaces/token';
 export class StripeInstance {

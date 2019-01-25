@@ -5,9 +5,9 @@
 
 import { Component, EventEmitter, Inject, Injectable, InjectionToken, Input, NgModule, Output, PLATFORM_ID, ViewChild } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
-import { BehaviorSubject as BehaviorSubject$1 } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 import { Observable as Observable$1 } from 'rxjs/Observable';
-import { BehaviorSubject as BehaviorSubject$2, Observable as Observable$2 } from 'rxjs/';
+import { BehaviorSubject as BehaviorSubject$1, Observable as Observable$2 } from 'rxjs/';
 import 'rxjs/add/observable/combineLatest';
 import 'rxjs/add/observable/fromPromise';
 import 'rxjs/add/observable/of';
@@ -92,7 +92,7 @@ class LazyStripeAPILoader {
         this.platformId = platformId;
         this.window = window;
         this.document = document;
-        this.status = new BehaviorSubject$1({
+        this.status = new BehaviorSubject({
             error: false,
             loaded: false,
             loading: false
@@ -282,7 +282,7 @@ class StripeInstance {
         this.window = window;
         this.key = key;
         this.options = options;
-        this.stripe$ = new BehaviorSubject$1(undefined);
+        this.stripe$ = new BehaviorSubject(undefined);
         this.loader
             .asStream()
             .filter((status) => status.loaded === true)
@@ -535,9 +535,9 @@ class StripeCardComponent {
         this.stripeService = stripeService;
         this.card = new EventEmitter();
         this.on = new EventEmitter();
-        this.options$ = new BehaviorSubject$2({});
-        this.elementsOptions$ = new BehaviorSubject$2({});
-        this.stripe$ = new BehaviorSubject$2(null);
+        this.options$ = new BehaviorSubject$1({});
+        this.elementsOptions$ = new BehaviorSubject$1({});
+        this.stripe$ = new BehaviorSubject$1(null);
     }
     /**
      * @private

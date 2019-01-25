@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Element } from '../interfaces/element';
 import { ElementsOptions, Elements } from '../interfaces/elements';
 import { BankAccount, Pii, CardDataOptions, BankAccountData, PiiData, TokenResult } from '../interfaces/token';
