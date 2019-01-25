@@ -14,13 +14,13 @@ import {
 } from '../interfaces/stripe';
 import { StripeCardComponent } from '../components/stripe-card.component';
 
-import 'rxjs/add/observable/combineLatest';
-import 'rxjs/add/observable/fromPromise';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/first';
-import 'rxjs/add/operator/map';
+import 'rxjs/observable/combineLatest';
+import 'rxjs/observable/fromPromise';
+import 'rxjs/observable/of';
+import 'rxjs/operators/switchMap';
+import 'rxjs/operators/filter';
+import 'rxjs/operators/first';
+import 'rxjs/operators/map';
 
 @NgModule({
   declarations: [StripeCardComponent],

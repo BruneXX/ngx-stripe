@@ -6,13 +6,13 @@
 import { Component, EventEmitter, Inject, Injectable, InjectionToken, Input, NgModule, Output, PLATFORM_ID, ViewChild } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { BehaviorSubject, Observable } from 'rxjs';
-import 'rxjs/add/observable/combineLatest';
-import 'rxjs/add/observable/fromPromise';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/first';
-import 'rxjs/add/operator/map';
+import 'rxjs/observable/combineLatest';
+import 'rxjs/observable/fromPromise';
+import 'rxjs/observable/of';
+import 'rxjs/operators/switchMap';
+import 'rxjs/operators/filter';
+import 'rxjs/operators/first';
+import 'rxjs/operators/map';
 
 /**
  * @fileoverview added by tsickle
