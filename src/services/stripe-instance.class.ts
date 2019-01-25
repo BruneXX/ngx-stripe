@@ -1,7 +1,8 @@
 import { Inject, PLATFORM_ID } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { switchMap, fromPromise } from 'rxjs/operators';
+import { map, filter, first } from 'rxjs/operators';
 
 import { WindowRef } from './window-ref.service';
 import { LazyStripeAPILoader, Status } from './api-loader.service';

@@ -1,6 +1,7 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 
 import { Observable } from 'rxjs';
+import { map, filter } from 'rxjs/operators';
 
 import { WindowRef } from './window-ref.service';
 import { LazyStripeAPILoader, Status } from './api-loader.service';
