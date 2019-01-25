@@ -37,7 +37,7 @@ import { PaymentRequestOptions } from '../interfaces/payment-request';
 
 @Injectable()
 export class StripeService implements StripeServiceInterface {
-  private stripe: StripeInstance;
+  private stripe!: StripeInstance;
 
   constructor(
     @Inject(STRIPE_PUBLISHABLE_KEY) private key: string,

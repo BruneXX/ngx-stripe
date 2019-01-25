@@ -8,7 +8,8 @@ import {
   Output
 } from '@angular/core';
 
-import { Observable, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs/';
+import { Observable } from 'rxjs/';
 
 import {
   Element as StripeElement,
@@ -28,8 +29,8 @@ export class StripeCardComponent implements OnInit {
   @Output()
   public on = new EventEmitter<{ type: ElementEventType; event: any }>();
 
-  @ViewChild('stripeCard') private stripeCard: ElementRef;
-  private element: StripeElement;
+  @ViewChild('stripeCard') private stripeCard!: ElementRef;
+  private element!: StripeElement;
   @Input()
   private set options(optionsIn: ElementOptions) {
     this.options$.next(optionsIn);
