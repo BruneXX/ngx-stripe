@@ -1,0 +1,1 @@
+{"version":3,"file":"ngx-stripe.js","sourceRoot":"","sources":["../ngx-stripe.ts"],"names":[],"mappings":";;;;;;;AAIA,iQAAc,cAAc,CAAC","sourcesContent":["/**\n * Generated bundle index. Do not edit.\n */\n\nexport * from './public_api';\n"]}
