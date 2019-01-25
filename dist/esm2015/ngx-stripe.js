@@ -9,7 +9,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import 'rxjs/observable/combineLatest';
 import 'rxjs/observable/fromPromise';
 import 'rxjs/observable/of';
-import 'rxjs/operators/switchMap';
 import 'rxjs/operators/filter';
 import 'rxjs/operators/first';
 import 'rxjs/operators/map';
@@ -636,6 +635,7 @@ StripeCardComponent.propDecorators = {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+// import 'rxjs/operators/switchMap';
 class NgxStripeModule {
     /**
      * @param {?=} publishableKey

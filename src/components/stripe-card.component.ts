@@ -10,6 +10,7 @@ import {
 
 import { BehaviorSubject } from 'rxjs';
 import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 import {
   Element as StripeElement,
