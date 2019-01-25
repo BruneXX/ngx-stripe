@@ -1,5 +1,5 @@
 import { Inject, PLATFORM_ID } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 
 import { WindowRef } from './window-ref.service';

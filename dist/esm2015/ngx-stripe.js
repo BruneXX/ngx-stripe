@@ -5,9 +5,7 @@
 
 import { Component, EventEmitter, Inject, Injectable, InjectionToken, Input, NgModule, Output, PLATFORM_ID, ViewChild } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
-import { BehaviorSubject } from 'rxjs';
-import { Observable as Observable$1 } from 'rxjs/Observable';
-import { BehaviorSubject as BehaviorSubject$1, Observable as Observable$2 } from 'rxjs/';
+import { BehaviorSubject, Observable } from 'rxjs';
 import 'rxjs/add/observable/combineLatest';
 import 'rxjs/add/observable/fromPromise';
 import 'rxjs/add/observable/of';
@@ -326,13 +324,13 @@ class StripeInstance {
             /** @type {?} */
             const stripe = (/** @type {?} */ (s));
             if (isBankAccount(a) && isBankAccountData(b)) {
-                return Observable$1.fromPromise(stripe.createToken(a, b));
+                return Observable.fromPromise(stripe.createToken(a, b));
             }
             else if (isPii(a) && isPiiData(b)) {
-                return Observable$1.fromPromise(stripe.createToken(a, b));
+                return Observable.fromPromise(stripe.createToken(a, b));
             }
             else {
-                return Observable$1.fromPromise(stripe.createToken((/** @type {?} */ (a)), (/** @type {?} */ (b))));
+                return Observable.fromPromise(stripe.createToken((/** @type {?} */ (a)), (/** @type {?} */ (b))));
             }
         })
             .first();
@@ -350,9 +348,9 @@ class StripeInstance {
             /** @type {?} */
             const stripe = (/** @type {?} */ (s));
             if (isSourceData(a)) {
-                return Observable$1.fromPromise(stripe.createSource((/** @type {?} */ (a))));
+                return Observable.fromPromise(stripe.createSource((/** @type {?} */ (a))));
             }
-            return Observable$1.fromPromise(stripe.createSource((/** @type {?} */ (a)), b));
+            return Observable.fromPromise(stripe.createSource((/** @type {?} */ (a)), b));
         })
             .first();
     }
@@ -367,7 +365,7 @@ class StripeInstance {
             .switchMap(s => {
             /** @type {?} */
             const stripe = (/** @type {?} */ (s));
-            return Observable$1.fromPromise(stripe.retrieveSource(source));
+            return Observable.fromPromise(stripe.retrieveSource(source));
         })
             .first();
     }
@@ -535,9 +533,9 @@ class StripeCardComponent {
         this.stripeService = stripeService;
         this.card = new EventEmitter();
         this.on = new EventEmitter();
-        this.options$ = new BehaviorSubject$1({});
-        this.elementsOptions$ = new BehaviorSubject$1({});
-        this.stripe$ = new BehaviorSubject$1(null);
+        this.options$ = new BehaviorSubject({});
+        this.elementsOptions$ = new BehaviorSubject({});
+        this.stripe$ = new BehaviorSubject(null);
     }
     /**
      * @private
@@ -568,7 +566,7 @@ class StripeCardComponent {
      */
     ngOnInit() {
         /** @type {?} */
-        const elements$ = Observable$2.combineLatest(this.elementsOptions$.asObservable(), this.stripe$.asObservable()).switchMap(([options, stripe]) => {
+        const elements$ = Observable.combineLatest(this.elementsOptions$.asObservable(), this.stripe$.asObservable()).switchMap(([options, stripe]) => {
             if (stripe) {
                 if (Object.keys(options).length > 0) {
                     return stripe.elements(options);
@@ -582,7 +580,7 @@ class StripeCardComponent {
                 return this.stripeService.elements();
             }
         });
-        Observable$2.combineLatest(elements$, this.options$.asObservable().filter(options => Boolean(options))).subscribe(([elements, options]) => {
+        Observable.combineLatest(elements$, this.options$.asObservable().filter(options => Boolean(options))).subscribe(([elements, options]) => {
             this.element = elements.create('card', options);
             this.element.on('blur', ev => this.on.emit({
                 event: ev,

@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { WindowRef } from './window-ref.service';
 import { LazyStripeAPILoader } from './api-loader.service';
 import { StripeJS, Options } from '../interfaces/stripe';

@@ -3,8 +3,8 @@
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 import { Component, Input, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/';
-import { Observable } from 'rxjs/';
+import { BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { StripeService } from '../services/stripe.service';
 import { StripeInstance } from '../services/stripe-instance.class';
 export class StripeCardComponent {

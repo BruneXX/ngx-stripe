@@ -2,7 +2,7 @@
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 import { isSourceData } from '../interfaces/sources';
 import { isBankAccount, isBankAccountData, isPii, isPiiData } from '../interfaces/token';

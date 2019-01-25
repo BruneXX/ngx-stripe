@@ -8,8 +8,8 @@ import {
   Output
 } from '@angular/core';
 
-import { BehaviorSubject } from 'rxjs/';
-import { Observable } from 'rxjs/';
+import { BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import {
   Element as StripeElement,
